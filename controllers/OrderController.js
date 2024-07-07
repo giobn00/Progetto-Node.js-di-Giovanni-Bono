@@ -27,8 +27,13 @@ exports.orderList = [
         const sortOrder = req.query.sort || 'asc'; // Default to ascending order
         const startDate = req.query.startDate;
         const endDate = req.query.endDate;
+		const product = req.query.product;
         const query = {};
 
+		if(product){
+			query.product = { $in: [product] };
+			
+		}
         if (startDate || endDate) {
             query.createdAt = {};
             if (startDate) {
