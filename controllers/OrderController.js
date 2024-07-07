@@ -1,4 +1,6 @@
 const Order = require("../models/OrderModel");
+const User = require("../models/UserModel");
+const Product = require("../models/ProductModel");
 const { body,validationResult } = require("express-validator");
 const apiResponse = require("../helpers/apiResponse");
 const auth = require("../middlewares/jwt");
@@ -80,8 +82,32 @@ exports.orderStore = [
 	auth,
 	body("name", "Name must not be empty.").isLength({ min: 1 }).trim(),
 	body("description").isLength({ min: 1 }).trim(),
-    body("user").isArray().withMessage('user must be an array').notEmpty().withMessage('user must not be empty'),
-    body("product").isArray().withMessage('product must be an array').notEmpty().withMessage('product must not be empty'),
+    body("user").isArray().withMessage('user must be an array').notEmpty().withMessage('user must not be empty')
+        .custom(myArray => {
+        return User.find({ _id: { $in: myArray } })
+        .then(foundUsers => {
+          if (foundUsers.length == myArray.length) {
+            //console.log('Some of the IDs exist in the database:', foundUsers);
+            return true;
+          } else {
+            //console.log('None of the IDs exist in the database.');
+            return Promise.reject("One or more user id does not exist");
+          }
+        });
+      }),
+    body("product").isArray().withMessage('product must be an array').notEmpty().withMessage('product must not be empty')
+    .custom(myArray => {
+        return Product.find({ _id: { $in: myArray } })
+        .then(foundProducts => {
+          if (foundProducts.length == myArray.length) {
+            //console.log('Some of the IDs exist in the database:', foundProducts);
+            return true;
+          } else {
+            //console.log('None of the IDs exist in the database.');
+            return Promise.reject("One or more product id does not exist");
+          }
+        });
+      }),
 	body("*").escape(),
 	(req, res) => {
 		try {
@@ -123,6 +149,32 @@ exports.orderUpdate = [
 	auth,
 	body("name", "Name must not be empty.").isLength({ min: 1 }).trim(),
 	body("description").isLength({ min: 1 }).trim(),
+    body("user").isArray().withMessage('user must be an array').notEmpty().withMessage('user must not be empty')
+        .custom(myArray => {
+        return User.find({ _id: { $in: myArray } })
+        .then(foundUsers => {
+          if (foundUsers.length == myArray.length) {
+            //console.log('Some of the IDs exist in the database:', foundUsers);
+            return true;
+          } else {
+            //console.log('None of the IDs exist in the database.');
+            return Promise.reject("One or more user id does not exist");
+          }
+        });
+      }),
+    body("product").isArray().withMessage('product must be an array').notEmpty().withMessage('product must not be empty')
+    .custom(myArray => {
+        return Product.find({ _id: { $in: myArray } })
+        .then(foundProducts => {
+          if (foundProducts.length == myArray.length) {
+            //console.log('Some of the IDs exist in the database:', foundProducts);
+            return true;
+          } else {
+            //console.log('None of the IDs exist in the database.');
+            return Promise.reject("One or more product id does not exist");
+          }
+        });
+      }),
 	body("*").escape(),
 	(req, res) => {
 		try {
