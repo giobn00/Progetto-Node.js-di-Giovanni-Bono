@@ -24,8 +24,27 @@ function OrderData(data) {
 exports.orderList = [
 	auth,
 	function (req, res) {
-		try {
-			Order.find({},"_id name description user product createdAt").then((orders)=>{
+        const sortOrder = req.query.sort || 'asc'; // Default to ascending order
+        const startDate = req.query.startDate;
+        const endDate = req.query.endDate;
+        const query = {};
+
+        if (startDate || endDate) {
+            query.createdAt = {};
+            if (startDate) {
+                query.createdAt["$gte"] = new Date(startDate);
+              }
+            if (endDate) {
+                query.createdAt["$lte"] = new Date(endDate);
+              }
+          } 
+         
+        if (!['asc', 'desc'].includes(sortOrder)) {
+            return res.status(400).json({ error: 'Invalid sort order. Valid values: asc, desc' });
+          }
+        try {
+			Order.find(query,"_id name description user product createdAt").sort({ createdAt: sortOrder === 'asc' ? 1 : -1 })
+            .then((orders)=>{
 				if(orders.length > 0){
 					return apiResponse.successResponseWithData(res, "Operation success", orders);
 				}else{
