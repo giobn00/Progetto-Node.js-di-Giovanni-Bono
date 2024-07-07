@@ -72,16 +72,22 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"title\": \"test\",\n    \"ddscription\": \"test_desc\",\n    \"isbn\": \"3214htrff4\",\n    \"user\": {\n        \"_id\": \"66894d99cbf92f73e6390699\"\n    }\n\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "prod_1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Test prod 1",
+									"type": "text"
 								}
-							}
+							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/book",
+							"raw": "http://localhost:3000/api/product",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -89,7 +95,7 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book"
+								"product"
 							]
 						}
 					},
@@ -97,7 +103,55 @@
 				},
 				{
 					"name": "Product List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -106,8 +160,12 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
-							"raw": "http://localhost:3000/api/book",
+							"raw": "http://localhost:3000/api/product",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -115,7 +173,7 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book"
+								"product"
 							]
 						}
 					},
@@ -123,7 +181,55 @@
 				},
 				{
 					"name": "Product Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -132,8 +238,12 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
-							"raw": "http://localhost:3000/api/book/5d43d14a246036209713e667",
+							"raw": "http://localhost:3000/api/product/668961801f132417c2aa2b97",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -141,8 +251,8 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book",
-								"5d43d14a246036209713e667"
+								"product",
+								"668961801f132417c2aa2b97"
 							]
 						}
 					},
@@ -151,6 +261,51 @@
 				{
 					"name": "Product Update",
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -168,7 +323,7 @@
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
-									"key": "title",
+									"key": "name",
 									"value": "testing book 123 456",
 									"type": "text"
 								},
@@ -176,16 +331,11 @@
 									"key": "description",
 									"value": "testing book desc 123 456",
 									"type": "text"
-								},
-								{
-									"key": "isbn",
-									"value": "3214htrff445",
-									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/book/5d43d753cdbdd1264291806c",
+							"raw": "http://localhost:3000/api/product/668961801f132417c2aa2b97",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -193,8 +343,8 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book",
-								"5d43d753cdbdd1264291806c"
+								"product",
+								"668961801f132417c2aa2b97"
 							]
 						}
 					},
@@ -203,6 +353,51 @@
 				{
 					"name": "Product Delete",
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -211,8 +406,12 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
-							"raw": "http://localhost:3000/api/book/5d43d753cdbdd1264291806c",
+							"raw": "http://localhost:3000/api/product/668961801f132417c2aa2b97",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -220,8 +419,8 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book",
-								"5d43d753cdbdd1264291806c"
+								"product",
+								"668961801f132417c2aa2b97"
 							]
 						}
 					},
@@ -284,7 +483,7 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
+								"value": "application/x-www-form-urlencoded",
 								"type": "text"
 							},
 							{
@@ -295,7 +494,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"name1\",\n    \"description\":\"desc1\",\n    \"user\": [\"66894d99cbf92f73e6390699\"],\n\n    \"product\": [\n         {\n            \"_id\": \"668961801f132417c2aa2b97\",\n            \"description\": \"Test prod 1\",\n            \"createdAt\": \"2024-07-06T15:23:44.430Z\"\n        }\n    ]\n}",
+							"raw": "{\n    \"name\":\"name1\",\n    \"description\":\"desc1\",\n    \"user\": [\"66894d99cbf92f73e6390699\"],\n\n    \"product\": [\"668961801f132417c2aa2b97\"]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -319,7 +518,55 @@
 				},
 				{
 					"name": "Order List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -328,8 +575,12 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
-							"raw": "http://localhost:3000/api/book",
+							"raw": "http://localhost:3000/api/order?sort=desc",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -337,7 +588,28 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book"
+								"order"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "desc"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-07-07T14:20:50.489Z",
+									"disabled": true
+								},
+								{
+									"key": "startDate",
+									"value": "2024-07-07T14:20:15.454Z",
+									"disabled": true
+								},
+								{
+									"key": "product",
+									"value": "668961801f132417c2aa2b97",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -345,7 +617,55 @@
 				},
 				{
 					"name": "Order Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -354,8 +674,12 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
-							"raw": "http://localhost:3000/api/book/5d43d14a246036209713e667",
+							"raw": "http://localhost:3000/api/order/668a99d5b99fa61eb1b6d80a",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -363,8 +687,8 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book",
-								"5d43d14a246036209713e667"
+								"order",
+								"668a99d5b99fa61eb1b6d80a"
 							]
 						}
 					},
@@ -373,6 +697,51 @@
 				{
 					"name": "Order Update",
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -390,24 +759,39 @@
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
-									"key": "title",
-									"value": "testing book 123 456",
+									"key": "name",
+									"value": "Order update 1",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "testing book desc 123 456",
+									"value": "test description",
 									"type": "text"
 								},
 								{
-									"key": "isbn",
-									"value": "3214htrff445",
+									"key": "user",
+									"value": "66894d99cbf92f73e6390699",
+									"type": "text"
+								},
+								{
+									"key": "product",
+									"value": "668aa51079aaaf1d31a442dd",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "668aa35da3190940c37005c5",
+									"type": "text"
+								},
+								{
+									"key": "product",
+									"value": "668aa53479aaaf1d31a442df",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/book/5d43d753cdbdd1264291806c",
+							"raw": "http://localhost:3000/api/order/668aa573309f07ae0bea87f1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -415,8 +799,8 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book",
-								"5d43d753cdbdd1264291806c"
+								"order",
+								"668aa573309f07ae0bea87f1"
 							]
 						}
 					},
@@ -425,6 +809,51 @@
 				{
 					"name": "Order Delete",
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -434,7 +863,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/api/book/5d43d753cdbdd1264291806c",
+							"raw": "http://localhost:3000/api/order/668a99d5b99fa61eb1b6d80a",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -442,8 +871,8 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book",
-								"5d43d753cdbdd1264291806c"
+								"order",
+								"668a99d5b99fa61eb1b6d80a"
 							]
 						}
 					},
@@ -516,16 +945,27 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"title\": \"test\",\n    \"ddscription\": \"test_desc\",\n    \"isbn\": \"3214htrff4\",\n    \"user\": {\n        \"_id\": \"66894d99cbf92f73e6390699\"\n    }\n\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "test firstname",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "test lastName",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "testmail@test.com",
+									"type": "text"
 								}
-							}
+							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/book",
+							"raw": "http://localhost:3000/api/user",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -533,7 +973,7 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book"
+								"user"
 							]
 						}
 					},
@@ -541,7 +981,55 @@
 				},
 				{
 					"name": "User List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -550,8 +1038,12 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
-							"raw": "http://localhost:3000/api/book",
+							"raw": "http://localhost:3000/api/user",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -559,7 +1051,7 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book"
+								"user"
 							]
 						}
 					},
@@ -567,7 +1059,55 @@
 				},
 				{
 					"name": "User Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -576,8 +1116,12 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
-							"raw": "http://localhost:3000/api/book/5d43d14a246036209713e667",
+							"raw": "http://localhost:3000/api/user/66897992458978f5ddf72075",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -585,8 +1129,8 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book",
-								"5d43d14a246036209713e667"
+								"user",
+								"66897992458978f5ddf72075"
 							]
 						}
 					},
@@ -595,6 +1139,51 @@
 				{
 					"name": "User Update",
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -612,24 +1201,24 @@
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
-									"key": "title",
-									"value": "testing book 123 456",
+									"key": "firstName",
+									"value": "testing firstName 123 456",
 									"type": "text"
 								},
 								{
-									"key": "description",
-									"value": "testing book desc 123 456",
+									"key": "lastName",
+									"value": "testing lastName desc 123 456",
 									"type": "text"
 								},
 								{
-									"key": "isbn",
-									"value": "3214htrff445",
+									"key": "email",
+									"value": "testemail123456@test.com",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/book/5d43d753cdbdd1264291806c",
+							"raw": "http://localhost:3000/api/user/66897992458978f5ddf72075",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -637,8 +1226,8 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book",
-								"5d43d753cdbdd1264291806c"
+								"user",
+								"66897992458978f5ddf72075"
 							]
 						}
 					},
@@ -647,6 +1236,51 @@
 				{
 					"name": "User Delete",
 					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "jnweofjoiejfoiejo86868",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -655,8 +1289,12 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
 						"url": {
-							"raw": "http://localhost:3000/api/book/5d43d753cdbdd1264291806c",
+							"raw": "http://localhost:3000/api/user/66897992458978f5ddf72075",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -664,14 +1302,81 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"book",
-								"5d43d753cdbdd1264291806c"
+								"user",
+								"66897992458978f5ddf72075"
 							]
 						}
 					},
 					"response": []
 				}
 			]
+		}
+	],
+	"auth": {
+		"type": "jwt",
+		"jwt": [
+			{
+				"key": "secret",
+				"value": "jnweofjoiejfoiejo86868",
+				"type": "string"
+			},
+			{
+				"key": "algorithm",
+				"value": "HS256",
+				"type": "string"
+			},
+			{
+				"key": "isSecretBase64Encoded",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "payload",
+				"value": "{}",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "headerPrefix",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "queryParamKey",
+				"value": "token",
+				"type": "string"
+			},
+			{
+				"key": "header",
+				"value": "{}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
