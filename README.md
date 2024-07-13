@@ -12,8 +12,6 @@ APIRestfull
     <a href="https://github.com/giobn00/Progetto-Node.js-di-Giovanni-Bono"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://#/">View Demo</a>
-    ·
     <a href="https://github.com/giobn00/Progetto-Node.js-di-Giovanni-Bono/issues">Report Bug</a>
     ·
     <a href="https://github.com/giobn00/Progetto-Node.js-di-Giovanni-Bono/issues">Request Feature</a>
@@ -35,7 +33,7 @@ This project will run on **NodeJs** using **MongoDB** as database. I had tried t
 -   JWT Tokens, make requests with a token after login with `Authorization` header with value `Bearer yourToken` where `yourToken` will be returned in Login response.
 -   Pre-defined response structures with proper status codes.
 -   Included CORS.
--    **Book** example with **CRUD** operations.
+-    **Order** | **Product**  | **User**  example with **CRUD** operations.
 -   Validations added.
 -   Included API collection for Postman.
 -   Light-weight project.
@@ -47,9 +45,7 @@ This project will run on **NodeJs** using **MongoDB** as database. I had tried t
 To create this prject I use the following tools
 
 * [![javascript][javascript.com]][javascript-url]
-* ![WebPack][WebPack.com]
 * ![HTML][HTML.com]
-* ![CSS][CSS.com]
 * ![gitignore][gitignore.com]
 * ![NodeJS][NodeJS.org]
 * ![MongoDB][MongoDB.org]
@@ -157,15 +153,12 @@ Press CTRL + C to stop the process.
 [javascript-url]: https://javascript.com
 [javascript.com]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
 [HTML.com]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
-[CSS.com]:https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-[WebPack.com]: https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=Webpack&logoColor=white
 [gitignore.com]: https://img.shields.io/badge/gitignore%20io-204ECF?style=for-the-badge&logo=gitignoredotio&logoColor=white
 [NodeJS.org]: https://img.shields.io/badge/nodejs-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white
 [ExpressJS.com]: https://img.shields.io/badge/Express.js-000000?
 [MongoDB.org]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [Express.org]:https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white
 [JWT.org]: https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white
-
 [Postman.org]: https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white
 [Postman]: https://www.postman.com/
 [Mongoose]: https://mongoosejs.com/
